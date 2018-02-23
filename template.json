@@ -12,15 +12,15 @@
   "volumes": [
     {
       "container": "/run/php/",
-      "bind": "fpm",
+      "bind": "fpm"
     },
     {
       "container": "/ssl/",
-      "bind": "ssl",
+      "bind": "ssl"
     },
     {
       "container": "/www/",
-      "bind": "web",
+      "bind": "web"
     },
     {
       "container": "/tmp/web/",
