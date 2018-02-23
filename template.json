@@ -1,0 +1,32 @@
+[{
+  "type": "container",
+  "title": "nginx",
+  "description": "High performance web server",
+  "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
+  "image": "nginx:1.13.8",
+  "platform": "linux",
+  "ports": [
+    "80/tcp",
+    "443/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/run/php/",
+      "bind": "fpm",
+    },
+    {
+      "container": "/ssl/",
+      "bind": "ssl",
+    },
+    {
+      "container": "/www/",
+      "bind": "web",
+    },
+    {
+      "container": "/tmp/web/",
+      "bind": "/tmp/web/"
+    }
+  ],
+  "restart_policy": "always"
+}
+]
